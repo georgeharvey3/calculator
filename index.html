@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="content">
+        <div id="calc-body">
+          <div id="screen">
+            <div id="screen-obj">
+              <p id="result"></p>
+            </div>
+          </div>
+          <div id="del-buttons">
+            <div data-key="67" class="button del" id="ac">
+              <p>AC</p>
+            </div>
+            <div data-key="8" class="button del" id="del">
+              <p>Del</p>
+            </div>
+          </div>
+          <div id="num-buttons">
+            <div data-key="49" class="button num" id="one">
+              <p>1</p>
+            </div>
+            <div data-key="50" class="button num" id="two">
+              <p>2</p>
+            </div>
+            <div data-key="51" class="button num" id="three">
+              <p>3</p>
+            </div>
+            <div data-key="52" class="button num" id="four">
+              <p>4</p>
+            </div>
+            <div data-key="53" class="button num" id="five">
+              <p>5</p>
+            </div>
+            <div data-key="54" class="button num" id="six">
+              <p>6</p>
+            </div>
+            <div data-key="55" class="button num" id="seven">
+              <p>7</p>
+            </div>
+            <div data-key="56" class="button num" id="eight">
+              <p>8</p>
+            </div>
+            <div data-key="57" class="button num" id="nine">
+              <p>9</p>
+            </div>
+            <div data-key="190" class="button num" id="dec">
+              <p>.</p>
+            </div>
+            <div data-key="48" class="button num" id="zero">
+              <p>0</p>
+            </div>
+            <div data-key="13" class="button num" id="equal">
+              <p>=</p>
+            </div>
+          </div>
+          <div id="op-buttons">
+            <div data-key="191" class="button op" id="divide" data-opval="divide">
+              <p data-opval="divide">÷</p>
+            </div>
+            <div data-key="189" class="button op" id="times" data-opval="times">
+              <p data-opval="times">×</p>
+            </div>
+            <div data-key="191" class="button op" id="minus" data-opval="minus">
+              <p data-opval="minus">-</p>
+            </div>
+            <div data-key="187" class="button op" id="plus" data-opval="plus">
+              <p data-opval="plus">+</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'CalcFont';
+    src: url('Calculator.ttf'); /* IE9 Compat Modes */
+    src: url('Calculator.ttf') format('embedded-opentype'), /* IE6-IE8 */
+         url('Calculator.ttf') format('woff'), /* Modern Browsers */
+         url('Calculator.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('Calculator.ttf') format('svg'); /* Legacy iOS */
+  }
+
+body {
+    background-image: url('background2.jpg');
+    background-size: cover;
+}
+
+div {
+    border-radius: 20px;
+}
+
+p {
+    font-family: CalcFont;
+    font-size: 24px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+#content {
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+#calc-body {
+    height: 525px;
+    width: 350px;
+    background-color: slategray;
+    margin: 0 auto;
+    display: grid;
+    padding: 25px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "screen screen screen"
+    "dels   dels   dels  "
+    "nums   nums   ops   "
+    "nums   nums   ops   ";
+    border-style: outset;
+    border-width: 2px;
+    border-color: darkgrey;
+    box-shadow: 4px 4px;
+}
+
+#screen {
+    grid-area: screen;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#screen-obj {
+    background-color: grey;
+    margin: 0 auto;
+    height: 75px;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-style: inset;
+    border-color: darkgrey;
+    border-radius: 10px;
+}
+
+#result {
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+#del-buttons {
+    grid-area: dels;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.del {
+    background-color: lightsalmon;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+
+#num-buttons {
+    grid-area: nums;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "one two three"
+    "four five six"
+    "seven eight nine"
+    "dec zero equal";
+    align-items: center;
+    justify-items: center;
+}
+
+.num {
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#op-buttons {
+    grid-area: ops;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "divide"
+    "times"
+    "minus"
+    "plus";
+    align-items: center;
+    justify-items: center;
+}
+
+.op {
+    background-color: lightsalmon;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.button {
+    height: 50px;
+    width: 65px;
+    box-shadow: 0px 3px darkgrey;
+}
+
+.button:hover {
+    filter: brightness(80%);
+}
+
+.button:active {
+    box-shadow: 0px 0px;
+    transform: translateY(3px) 
+}
+
+.pressed {
+    box-shadow: 0px 0px;
+    transform: translateY(3px) 
+}
